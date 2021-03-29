@@ -1,0 +1,1091 @@
+@import "select2"
+@import "magnific-popup"
+@import "slick-less"
+=b_a()
+  content: ''
+  position: absolute
+
+=m_a()
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+=flex()
+  display: flex
+  display: -webkit-flex
+
+=j-center()
+  justify-content: center
+  -webkit-justify-content: center
+
+=j-beetween()
+  justify-content: space-between
+  -webkit-justify-content: space-between
+
+=j-space-around()
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+=j-end()
+  justify-content: flex-end
+  -webkit-justify-content: flex-end
+
+=j-start()
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+=ai-center()
+  align-items: center
+  -webkit-align-items: center
+
+=ai-start()
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+=ai-end()
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+=as-center()
+  align-self: center
+  -webkit-align-self: center
+
+=as-end()
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+=as-start()
+  align-self: flex-start
+  -webkit-align-self: flex-start
+
+=wrap()
+  flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+
+=col()
+  flex-direction: column
+  -webkit-flex-direction: column
+
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+
+=box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+
+=transform($transform)
+  transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+
+
+=transition($transition_default)
+  transition: $transition_default
+  -webkit-transition: $transition_default
+  -moz-transition: $transition_default
+  -o-transition: $transition_default
+
+
+
+//@font-face
+  font-family: 'Rubik Medium'
+  src: url('../fonts/Rubik-Medium.eot')
+  src: local('Rubik Medium'), local('Rubik-Medium'), url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Medium.woff') format('woff'), url('../fonts/Rubik-Medium.ttf') format('truetype')
+  font-weight: 500
+  font-style: normal
+
+//$f500: 'Rubik Medium'
+
+
+//@font-face
+  font-family: 'Rubik Bold'
+  src: url('../fonts/Rubik-Bold.eot')
+  src: local('Rubik Bold'), local('Rubik-Bold'), url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Bold.woff') format('woff'), url('../fonts/Rubik-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+
+//$f700: 'Rubik Bold'
+
+//@font-face
+  font-family: 'Rubik Regular'
+  src: url('../fonts/Rubik-Regular.eot')
+  src: local('Rubik'), local('Rubik-Regular'), url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Regular.woff') format('woff'), url('../fonts/Rubik-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+//$f400: 'Rubik Regular'
+
+$transition_default: .3s linear
+$font: 'Rubik', sans-seri
+$green: #079D28
+$black: #515151
+$bg_grey: #F9F9F9
+$b_grey: 1px solid #E8E8E8
+$title_color: #19191B
+$red: #F2421B
+$yellow: #F9C81A
+$shadow: 0px 10px 40px rgba(0, 0, 0, 0.05)
+body
+  padding: 0
+  margin: 0
+  background: #fff
+  color: $black
+  font-size: 16px
+  line-height: 26px
+  font-family: $font
+  overflow-x: hidden
+*
+  outline: none
+  &::-webkit-scrollbar
+    width: 100%
+    height: 4px
+    background: #F3F3F3
+  &::-webkit-scrollbar-thumb:horizontal
+    background:  $green
+    +border-radius(4px)
+    height: 6px
+*, *::before, *::after
+  box-sizing: border-box
+
+a
+  color: $green
+  text-decoration: underline
+  +transition($transition_default)
+  &:hover, &:focus
+    color: $black
+    text-decoration: none
+
+button, input, .form-control
+  outline: none
+
+.form-control
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+p
+  margin:  0 0 1.2rem
+  @media (max-width: 1200px)
+    margin:  0 0 1rem
+button
+  cursor: pointer
+  &:hover, &:focus
+    +box-shadow(none)
+    outline: none
+
+img, video
+  max-width: 100%
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+.container
+  width: 100%
+  max-width: 1540px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 10px
+  @media (max-width: 1540px)
+    max-width: 1186px
+  @media (max-width: 991px)
+    padding: 0 17px
+
+.row
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  margin-right: -10px
+  margin-left: -10px
+  @media (max-width: 991px)
+    margin-right: -17px
+    margin-left: -17px
+
+
+.col
+  padding-left: 10px
+  padding-right: 10px
+  @media (max-width: 991px)
+    padding-left: 17px
+    padding-right: 17px
+
+
+.h_row
+  +flex
+  +ai-center
+  +j-beetween
+  padding: 10px 0
+  .col
+    +flex
+    +ai-center
+  .col_left
+    width: calc(100% - 200px)
+    @media (max-width: 991px)
+      width: 100%
+      +flex
+      +ai-center
+      +j-beetween
+
+    .logo
+      @media (min-width: 992px)
+        width: 20%
+      @media (max-width: 991px)
+        img
+          max-height: 60px
+      @media (max-width: 575px)
+        img
+          max-height: 30px
+    .contacts
+      @media (min-width: 992px)
+        width: 80%
+  .col_right
+
+    width: 200px
+    @media (max-width: 991px)
+      display: none
+
+
+  .contacts
+    +flex
+    +ai-center
+
+
+    .d_flex
+      +flex
+      &.delivery
+        margin-right: 10%
+        @media (max-width: 991px)
+          display: none
+      &.phone
+        text-decoration: none
+        &:hover
+          text-decoration: none
+        picture
+          padding-top: 3px
+      picture
+        margin-right: 15px
+      .text
+        strong
+          display: block
+          font-size: 20px
+          color: #19191B
+        span
+          color: $black
+          font-size: 14px
+          @media (max-width: 991px)
+            display: none
+
+
+.mm_btn
+  width: 27px
+  height: 22px
+  +flex
+  @media (min-width: 992px)
+    display: none
+  .hamburger
+    position: relative
+    width: 27px
+    height: 22px
+    background: none
+    border: 0
+    span
+      position: absolute
+      left: 0
+      width: 100%
+      height: 2px
+      background: #19191B
+      +border-radius(10px)
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+      &:nth-child(3)
+        bottom: 0
+
+a.delivery_zones
+  display: inline-block
+  border: $b_grey
+  +border-radius(50px)
+  color: $black
+  font-size: 16px
+  text-decoration: none
+  padding: 12px 30px
+  &:hover, &:focus
+    text-decoration: none
+    color: #fff
+    background: $green
+    border: 1px solid $green
+
+
+
+.basket_btn
+  display: inline-block
+  text-decoration: none
+  text-align: center
+  color: #fff
+  font-size: 16px
+  background: $green
+  +border-radius(5px)
+  padding: 12px 35px
+  @media (max-width: 1540px)
+    padding: 12px 20px
+  @media (max-width: 991px)
+    position: fixed
+    top: 50%
+    right: 17px
+    width: 60px
+    height: 60px
+    z-index: 9999
+    +border-radius(50%)
+    padding: 0
+    +flex
+    +ai-center
+    +j-center
+
+  > div
+    display: inline-block
+
+  &:hover, &:focus
+    text-decoration: none
+    color: #fff
+    background: $red
+
+  .basket_desktop
+    @media (max-width: 991px)
+      display: none
+  .basket_mobile
+    @media (min-width: 992px)
+      display: none
+
+  .basket_text
+    border-right: 1px solid #fff
+    position: relative
+    vertical-align: middle
+    padding-right: 10px
+    @media (max-width: 991px)
+      padding-right: 0
+      border: 0
+      +flex
+      margin-top: 3px
+      margin-right: 3px
+
+    span
+      @media (max-width: 991px)
+        display: none
+    svg, img
+      margin-right: 10px
+      margin-bottom: -2px
+      @media (max-width: 991px)
+        margin: 0
+    &:before
+      +b_a
+      left: 0
+      top: 0
+      bottom: 0
+      margin: auto
+  .count
+    padding-left: 10px
+    @media (max-width: 991px)
+      position: absolute
+      width: 14px
+      height: 14px
+      border: 1px solid $green
+      background: #fff
+      +flex
+      +ai-center
+      +j-center
+      +border-radius(50%)
+      color: $green
+      font-size: 10px
+      padding: 0
+      top: 0
+      right: 5px
+
+
+
+.main_nav
+  border-top: $b_grey
+  padding: 22px 0
+  @media (max-width: 991px)
+    padding: 0
+    border: 0
+.n_row
+  +flex
+  +ai-center
+  +wrap
+  .nav
+    padding-left: 20px
+    @media (max-width: 1540px)
+      padding-left: 7px
+    @media (max-width: 991px)
+      padding-left: 0
+      width: 100%
+
+
+    &.first
+      border-right: $b_grey
+      padding-right: 20px
+      padding-left: 0
+      @media (max-width: 1540px)
+        padding-right: 7px
+      @media (max-width: 991px)
+        display: none
+      li
+        &:first-child
+          @media (min-width: 992px)
+            padding-left: 0
+        a
+          font-weight: 500
+    li
+      display: inline-block
+      padding: 0 20px
+      @media (max-width: 1540px)
+        padding: 0 7px
+      @media (max-width: 991px)
+        padding: 0 5px
+        width: 100%
+      a
+        display: inline-block
+        position: relative
+        color: $black
+        text-decoration: none
+        @media (max-width: 991px)
+          font-size: 15px
+
+        &:hover, &:focus
+          text-decoration: underline
+          color: $green
+  .col_left
+    width: 80%
+    +flex
+    +ai-center
+    @media (max-width: 991px)
+      +wrap
+      width: 100%
+
+
+
+  .col_right
+    width: 20%
+    text-align: right
+    @media (max-width: 991px)
+      width: 100%
+      text-align: left
+
+.main_menu
+
+  @media (max-width: 991px)
+    position: fixed
+    right: 0
+    top: 0
+    width: 80%
+    height: 100%
+    overflow: auto
+    background: $bg_grey
+    z-index: 999
+    +transition($transition_default)
+    +transform(translateX(100%))
+    opacity: 0
+    padding: 50px 0
+    &.open
+      opacity: 1
+      +transform(translateX(0))
+
+  .mm_close
+    position: absolute
+    left: 0
+    top: 0
+    width: 30px
+    height: 30px
+    background: $green
+    &:before, &:after
+      +b_a
+      +m_a
+      width: 25px
+      height: 1px
+      background: #fff
+    &:before
+      +transform(rotate(45deg))
+    &:after
+      +transform(rotate(-45deg))
+    @media (min-width: 992px)
+      display: none
+
+
+
+.mm_catalog
+  display: block
+  overflow: auto
+  padding: 10px 0
+
+  @media (min-width: 992px)
+    display: none
+  .nav
+    +flex
+    +ai-center
+    li
+      margin-right: 4px
+      a
+        display: inline-block
+        font-size: 14px
+        color: $black
+        background: $bg_grey
+        +border-radius(15px)
+        padding: 0 10px
+        text-decoration: none
+        white-space: nowrap
+        &:hover, &.active
+          text-decoration: none
+          color: $green
+
+
+
+.main_slider
+  max-width: 1540px
+  margin: auto
+  @media (max-width: 1540px)
+    max-width: 1186px
+  @media (max-width: 991px)
+    margin-bottom: 10px
+  @media (max-width: 575px)
+    padding: 0 30px 0 12px
+
+  .slick-list
+    overflow: visible
+  .main_slider_item
+    padding: 0 10px
+    @media (max-width: 575px)
+      padding: 0 6px
+
+    &:not(.slick-current)
+      opacity: 0.5
+  .slick-current
+    //margin: 0 20px
+  .main_slider_container
+    position: relative
+    +border-radius(10px)
+    background-position: center
+    background-size: cover
+    height: 600px
+    @media (max-width: 1540px)
+      height: 320px
+    @media (max-width: 1200px)
+      height: 300px
+    @media (max-width: 991px)
+      height: 280px
+    @media (max-width: 767px)
+      height: 220px
+    @media (max-width: 575px)
+      height: 120px
+    @media (max-width: 375px)
+      height: 93px
+    &:before
+      +b_a
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background: linear-gradient(140deg, rgba(26, 26, 26, 0.8) 18.08%, rgba(0, 0, 0, 0) 62.11%)
+      +border-radius(10px)
+
+
+    img
+      +border-radius(10px)
+    .main_slider_content
+      position: absolute
+      left: 97px
+      top: 0
+      bottom: 0
+      +flex
+      +ai-center
+      @media (max-width: 767px)
+        left: 30px
+
+      .label
+        background: $green
+        color: #fff
+        +border-radius(50px)
+        padding: 10px 25px
+        font-size: 20px
+        font-weight: 500
+        display: inline-block
+        margin-bottom: 20px
+        @media (max-width: 1540px)
+          padding: 8px 25px
+          margin-bottom: 10px
+        @media (max-width: 1200px)
+          font-size: 18px
+        @media (max-width: 991px)
+          padding: 5px 15px
+          font-size: 16px
+
+        @media (max-width: 767px)
+          font-size: 14px
+        @media (max-width: 575px)
+          font-size: 10px
+          +border-radius(14px)
+          line-height: 1
+          padding: 5px 8px
+
+
+      .title
+        color: #fff
+        font-size: 70px
+        line-height: 83px
+        font-weight: 500
+        margin-bottom: 20px
+        @media (max-width: 1540px)
+          margin-bottom: 5px
+        @media (max-width: 1200px)
+          font-size: 50px
+          line-height: 1.2
+        @media (max-width: 991px)
+          font-size: 40px
+        @media (max-width: 575px)
+          font-size: 20px
+      .desc
+        font-size: 20px
+        color: #fff
+        line-height: 33px
+        max-width: 450px
+        @media (max-width: 1200px)
+          line-height: 1.2
+          font-size: 18px
+
+        @media (max-width: 991px)
+          display: none
+.label
+  font-size: 14px
+  line-height: 1
+  color: #fff
+  font-weight: 500
+  +border-radius(50px)
+  padding: 9px 16px
+  @media (max-width: 1540px)
+    font-size: 10px
+    padding: 7px 15px
+  &.new
+    background: $green
+  &.hit
+    background: $red
+  &.discount
+    background: $yellow
+
+
+
+.products_list
+  @media (max-width: 575px)
+    margin-bottom: 20px
+  .col
+    width: 25%
+    margin-bottom: 45px
+    @media (max-width: 1100px)
+      width: 33.33%
+      margin-bottom: 30px
+    @media (max-width: 767px)
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
+      margin-bottom: 10px
+  .product_item
+    background: #fff
+    +box-shadow(0px 10px 40px rgba(0, 0, 0, 0.05))
+    +border-radius(10px)
+    padding: 30px 30px 50px
+    height: 100%
+    @media (max-width: 1540px)
+      padding: 22px 22px 40px
+    @media (max-width: 575px)
+      +flex
+      padding: 13px 20px 20px 13px
+
+    .product_item_img
+      height: 320px
+      width: 100%
+      position: relative
+      @media (max-width: 1540px)
+        height: 243px
+      @media (max-width: 575px)
+        width: 50%
+        height: 180px
+
+      img
+        max-height: 320px
+        @media (max-width: 1540px)
+          max-height: 243px
+        @media (max-width: 575px)
+          max-height: 180px
+
+      .label
+        position: absolute
+        top: 10px
+        left: 0
+
+    .product_item_body
+      +flex
+      +col
+      +j-beetween
+
+      @media (min-width: 576px)
+        height: calc(100% - 243px)
+      @media (min-width: 1521px)
+        height: calc(100% - 320px)
+      @media (max-width: 575px)
+        width: 50%
+      .product_item_name
+        color: #19191B
+        font-size: 25px
+        line-height: 28px
+        text-decoration: none
+        display: inline-block
+        margin-bottom: 10px
+        @media (max-width: 1540px)
+          font-size: 18px
+          line-height: 21px
+        @media (max-width: 575px)
+          margin-bottom: 3px
+        &:hover
+          text-decoration: none
+          color: $green
+      .product_item_excerpt
+        margin-bottom: 10px
+        min-height: 80px
+        @media (max-width: 1540px)
+          font-size: 12px
+          line-height: 20px
+      .variations
+        +flex
+        +ai-center
+        +border-radius(5px)
+        background: #F3F3F7
+        padding: 2px
+        position: relative
+        margin-bottom: 25px
+        @media (max-width: 575px)
+          margin-bottom: 10px
+
+        &.active
+          &:before
+            //left: initial
+            //right: 2px
+            +transform(translateX(calc(98%)))
+        &:before
+          +b_a
+          left: 2px
+          top: 2px
+          bottom: 2px
+          width: 50%
+          background: #fff
+          +border-radius(4px)
+          +transform(translateX(0))
+          +transition($transition_default)
+          +box-shadow(5px 0px 15px #ECECF3)
+        .item
+          color: #19191B
+          font-size: 14px
+          width: 50%
+          height: 36px
+          position: relative
+          cursor: pointer
+          +flex
+          +ai-center
+          +j-center
+          @media (max-width: 1540px)
+            font-size: 12px
+            height: 26px
+          @media (max-width: 575px)
+            font-size: 10px
+            height: 24px
+
+
+      .price-add_to_basket
+        +flex
+        +ai-center
+        +j-beetween
+        .add_to_basket
+          width: 50%
+          @media (max-width: 575px)
+            width: 100%
+            max-width: 100%
+        > .price
+          +flex
+          +ai-center
+          width: 50%
+          padding-right: 10px
+          @media (max-width: 575px)
+            display: none
+          .item
+            display: none
+            color: #19191B
+            font-size: 24px
+            @media (max-width: 1540px)
+              font-size: 18px
+
+        .price
+          &.active
+            .item
+              &:nth-child(1)
+                display: none
+              &:nth-child(2)
+                display: block
+          .item
+
+            &:first-child
+              display: block
+            &:nth-child(2)
+              display: none
+
+
+
+
+
+
+
+.add_to_basket
+  +flex
+  +ai-center
+  +j-center
+  width: 100%
+  max-width: 150px
+  height: 50px
+  +border-radius(5px)
+  text-decoration: none
+  border: 1px solid $green
+  color: $green
+  font-size: 16px
+  padding: 5px
+  @media (max-width: 1540px)
+    font-size: 12px
+    height: 37px
+  &:hover
+    background: $green
+    color: #fff
+    .text
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.83594 10.6667H15.3634C15.5993 10.6667 15.8063 10.5089 15.8702 10.2798L17.9797 2.81303C18.025 2.65206 17.994 2.47915 17.8941 2.3454C17.7941 2.21207 17.6387 2.13332 17.4728 2.13332H4.61852L4.24155 0.417775C4.18799 0.173471 3.97375 0 3.72656 0H0.527344C0.235931 0 0 0.238609 0 0.533329C0 0.828188 0.235931 1.06666 0.527344 1.06666H3.30331L5.20766 9.73326C4.64735 9.97965 4.25391 10.5437 4.25391 11.2001C4.25391 12.0823 4.96362 12.8 5.83594 12.8H15.3634C15.655 12.8 15.8908 12.5616 15.8908 12.2667C15.8908 11.972 15.655 11.7334 15.3634 11.7334H5.83594C5.54549 11.7334 5.30859 11.4944 5.30859 11.2001C5.30859 10.9058 5.54549 10.6667 5.83594 10.6667Z' fill='%23fff'/%3e%3cpath d='M5.30859 14.4C5.30859 15.2824 6.01831 16 6.89076 16C7.76308 16 8.47279 15.2824 8.47279 14.4C8.47279 13.5178 7.76308 12.8 6.89076 12.8C6.01831 12.8 5.30859 13.5178 5.30859 14.4Z' fill='%23fff'/%3e%3cpath d='M12.7266 14.4C12.7266 15.2824 13.4363 16 14.3086 16C15.181 16 15.8906 15.2824 15.8906 14.4C15.8906 13.5178 15.181 12.8 14.3086 12.8C13.4363 12.8 12.7266 13.5178 12.7266 14.4Z' fill='%23fff'/%3e%3c/svg%3e ")
+
+
+  .price
+    @media (min-width: 576px)
+      display: none
+  .text
+    display: inline-block
+    position: relative
+    padding-left: 25px
+    > span
+      @media (max-width: 575px)
+        display: none
+    &:before
+      +b_a
+      left: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 18px
+      height: 16px
+      +transition($transition_default)
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.83594 10.6667H15.3634C15.5993 10.6667 15.8063 10.5089 15.8702 10.2798L17.9797 2.81303C18.025 2.65206 17.994 2.47915 17.8941 2.3454C17.7941 2.21207 17.6387 2.13332 17.4728 2.13332H4.61852L4.24155 0.417775C4.18799 0.173471 3.97375 0 3.72656 0H0.527344C0.235931 0 0 0.238609 0 0.533329C0 0.828188 0.235931 1.06666 0.527344 1.06666H3.30331L5.20766 9.73326C4.64735 9.97965 4.25391 10.5437 4.25391 11.2001C4.25391 12.0823 4.96362 12.8 5.83594 12.8H15.3634C15.655 12.8 15.8908 12.5616 15.8908 12.2667C15.8908 11.972 15.655 11.7334 15.3634 11.7334H5.83594C5.54549 11.7334 5.30859 11.4944 5.30859 11.2001C5.30859 10.9058 5.54549 10.6667 5.83594 10.6667Z' fill='%23079D28'/%3e%3cpath d='M5.30859 14.4C5.30859 15.2824 6.01831 16 6.89076 16C7.76308 16 8.47279 15.2824 8.47279 14.4C8.47279 13.5178 7.76308 12.8 6.89076 12.8C6.01831 12.8 5.30859 13.5178 5.30859 14.4Z' fill='%23079D28'/%3e%3cpath d='M12.7266 14.4C12.7266 15.2824 13.4363 16 14.3086 16C15.181 16 15.8906 15.2824 15.8906 14.4C15.8906 13.5178 15.181 12.8 14.3086 12.8C13.4363 12.8 12.7266 13.5178 12.7266 14.4Z' fill='%23079D28'/%3e%3c/svg%3e ")
+
+
+.text_center
+  text-align: center
+.load_more
+  display: inline-block
+  background: none
+  border: 1px solid #E8E8E8
+  +border-radius(5px)
+  padding: 15px 30px
+  color: $black
+  font-size: 16px
+  +transition($transition_default)
+  &:hover
+    background: $green
+    border: 1px solid $green
+    color: #fff
+    span
+
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.3606 2.98305C16.9739 2.94779 16.6318 3.23273 16.5966 3.61945L16.5034 4.64141C14.9228 2.15916 12.1791 0.5 8.99996 0.5C5.57992 0.5 2.56594 2.45195 1.06976 5.38159C0.893138 5.72742 1.03032 6.15095 1.37615 6.32757C1.72205 6.5042 2.14551 6.36705 2.32213 6.02118C3.58836 3.54182 6.1311 1.90625 8.99996 1.90625C11.6148 1.90625 13.9745 3.26789 15.3264 5.40106L14.3239 4.68504C14.0079 4.45937 13.5687 4.53256 13.3431 4.84855C13.1174 5.16457 13.1906 5.60367 13.5066 5.82937L16.5467 8.00066C16.9923 8.31829 17.6068 8.02752 17.6556 7.49233L17.997 3.74714C18.0323 3.36038 17.7474 3.01831 17.3606 2.98305Z' fill='%23fff'/%3e%3cpath d='M16.6238 12.6724C16.2779 12.4959 15.8544 12.633 15.6778 12.9788C14.4116 15.4582 11.8688 17.0938 8.99996 17.0938C6.38514 17.0938 4.02539 15.7321 2.67349 13.599L3.67604 14.315C3.99206 14.5407 4.43116 14.4675 4.65686 14.1515C4.88253 13.8355 4.80934 13.3964 4.49335 13.1706L1.45322 10.9994C1.01309 10.6849 0.393571 10.967 0.344352 11.5077L0.00294988 15.2529C-0.0323118 15.6396 0.25263 15.9817 0.639313 16.0169C1.02652 16.0521 1.36814 15.7669 1.40336 15.3805L1.49653 14.3586C3.07708 16.8409 5.82082 18.5 8.99996 18.5C12.42 18.5 15.434 16.5481 16.9302 13.6184C17.1068 13.2726 16.9696 12.8491 16.6238 12.6724Z' fill='%23fff'/%3e%3c/svg%3e ")
+
+
+  span
+    display: inline-block
+    position: relative
+    padding-left: 30px
+
+
+
+    &:before
+      +b_a
+      left: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 18px
+      height: 19px
+      +transition($transition_default)
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.3606 2.98305C16.9739 2.94779 16.6318 3.23273 16.5966 3.61945L16.5034 4.64141C14.9228 2.15916 12.1791 0.5 8.99996 0.5C5.57992 0.5 2.56594 2.45195 1.06976 5.38159C0.893138 5.72742 1.03032 6.15095 1.37615 6.32757C1.72205 6.5042 2.14551 6.36705 2.32213 6.02118C3.58836 3.54182 6.1311 1.90625 8.99996 1.90625C11.6148 1.90625 13.9745 3.26789 15.3264 5.40106L14.3239 4.68504C14.0079 4.45937 13.5687 4.53256 13.3431 4.84855C13.1174 5.16457 13.1906 5.60367 13.5066 5.82937L16.5467 8.00066C16.9923 8.31829 17.6068 8.02752 17.6556 7.49233L17.997 3.74714C18.0323 3.36038 17.7474 3.01831 17.3606 2.98305Z' fill='%23515151'/%3e%3cpath d='M16.6238 12.6724C16.2779 12.4959 15.8544 12.633 15.6778 12.9788C14.4116 15.4582 11.8688 17.0938 8.99996 17.0938C6.38514 17.0938 4.02539 15.7321 2.67349 13.599L3.67604 14.315C3.99206 14.5407 4.43116 14.4675 4.65686 14.1515C4.88253 13.8355 4.80934 13.3964 4.49335 13.1706L1.45322 10.9994C1.01309 10.6849 0.393571 10.967 0.344352 11.5077L0.00294988 15.2529C-0.0323118 15.6396 0.25263 15.9817 0.639313 16.0169C1.02652 16.0521 1.36814 15.7669 1.40336 15.3805L1.49653 14.3586C3.07708 16.8409 5.82082 18.5 8.99996 18.5C12.42 18.5 15.434 16.5481 16.9302 13.6184C17.1068 13.2726 16.9696 12.8491 16.6238 12.6724Z' fill='%23515151'/%3e%3c/svg%3e ")
+
+
+
+
+
+section
+  padding: 28px 0
+  @media (max-width: 1540px)
+    padding: 5px 0
+  @media (max-width: 575px)
+    padding: 15px 0
+  &:first-of-type
+    padding-top: 55px
+    @media (max-width: 1540px)
+      padding-top: 0
+    @media (max-width: 575px)
+      padding-top: 30px
+
+.s_title, h2, .h2
+  color: #19191B
+  font-size: 34px
+  line-height: 40px
+  margin: 45px 0
+  @media (max-width: 575px)
+    font-size: 24px
+    line-height: 28px
+    color: #000
+    margin: 20px 0
+
+
+
+.product_item
+  .amount
+    width: 50%
+    +flex
+    +ai-center
+    +j-center
+    border: $b_grey
+    +border-radius(5px)
+    height: 50px
+
+    @media (max-width: 1540px)
+      height: 37px
+    @media (max-width: 575px)
+      width: 100%
+      +j-beetween
+    span
+      +flex
+      +ai-center
+      +j-center
+      width: 30px
+      height: 30px
+      font-size: 18px
+      color: $black
+      cursor: pointer
+    input
+      width: 45px
+      height: 30px
+      background: none
+      border: 0
+      text-align: center
+      color: $black
+      font-size: 18px
+
+
+
+.seo_text
+  padding-bottom: 80px
+  @media (max-width: 1540px)
+    padding: 37px 0 100px
+  @media (max-width: 1100px)
+    padding: 30px 0
+  .col
+    width: 50%
+    @media (max-width: 1100px)
+      width: 100%
+
+.footer_menu
+  border-top: 2px solid #E8E8E8
+  border-bottom: 2px solid #E8E8E8
+  padding: 30px 0
+  @media (max-width: 1100px)
+    padding: 20px 0 10px
+  @media (max-width: 575px)
+    padding: 20px 0 0
+  .nav
+    @media (min-width: 576px)
+      +flex
+      +ai-center
+      +j-beetween
+    @media (max-width: 575px)
+      column-count: 3
+
+    li
+      @media (max-width: 1100px)
+        margin-bottom: 10px
+      @media (max-width: 575px)
+        margin-bottom: 22px
+        &:nth-child(3) , &:nth-child(4)
+          text-align: center
+        &:nth-child(5) , &:nth-child(6)
+          text-align: right
+      a
+        color: $black
+        font-size: 18px
+        text-decoration: none
+        @media (max-width: 1100px)
+          font-size: 16px
+        &:hover
+          text-decoration: none
+          color: $green
+footer
+  background: #F9F9F9
+  padding: 30px 0
+  @media (max-width: 991px)
+    padding: 30px 0 10px
+  .row
+    //+j-beetween
+    +ai-center
+    .pay
+      width: 38%
+      @media (max-width: 991px)
+        width: 100%
+        margin-bottom: 20px
+        text-align: center
+        order: 0
+    .unp
+      width: 15%
+      @media (max-width: 991px)
+        width: 50%
+        text-align: right
+        order: 3
+        margin-bottom: 20px
+    .site_name
+      width: 18%
+      @media (max-width: 991px)
+        width: 50%
+        order: 2
+        margin-bottom: 20px
+
+    .address
+      width: 29%
+      @media (max-width: 991px)
+        width: 100%
+        order: 4
+
+  p
+    margin-bottom: 0
+    color: #A0A0A0
+    font-size: 14px
