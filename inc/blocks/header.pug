@@ -71,17 +71,17 @@ header
                             span Корзина
                         .count 1
 
+if page.title ==='Главная'
+    .main_slider
+        -for(var ms=1;ms<=5;ms++)
+            .main_slider_item
+                .main_slider_container(style="background-image:url(img/examples/main_slide.png)")
 
-.main_slider
-    -for(var ms=1;ms<=5;ms++)
-        .main_slider_item
-            .main_slider_container(style="background-image:url(img/examples/main_slide.png)")
-
-                .main_slider_content
-                    div
-                        .label.new Новинка
-                        .title Пицца «Честер» #{ms}
-                        .desc Соус песто, сливочный соус, кубики брынзы, цыпленок, томаты черри, моцарелла
+                    .main_slider_content
+                        div
+                            .label.new Новинка
+                            .title Пицца «Честер» #{ms}
+                            .desc Соус песто, сливочный соус, кубики брынзы, цыпленок, томаты черри,моцарелла
 .container
     .mm_catalog
         ul.nav

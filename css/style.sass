@@ -171,7 +171,9 @@ button, input, .form-control
   &:hover, &:focus
     box-shadow: none
     outline: none
-
+strong, b
+  font-weight: 500
+  color: #19191B
 p
   margin:  0 0 1.2rem
   @media (max-width: 1200px)
@@ -221,6 +223,9 @@ ul
     padding-left: 17px
     padding-right: 17px
 
+
+header
+  +box-shadow( 0px 10px 40px rgba(0, 0, 0, 0.05))
 
 .h_row
   +flex
@@ -1089,3 +1094,221 @@ footer
     margin-bottom: 0
     color: #A0A0A0
     font-size: 14px
+
+
+.page_content
+  padding: 40px 0 110px
+
+h1, .h1, .page_title
+  color: #19191B
+  font-weight: 500
+  font-size: 48px
+  line-height: 57px
+
+.page_title
+  text-align: center
+  margin-bottom: 8px
+
+
+
+.breadcrumb
+  text-align: center
+  margin-bottom: 35px
+  li
+    display: inline-block
+    position: relative
+    padding: 0 15px
+    &:first-child
+      padding-left: 0
+
+    &:last-child
+      a
+        color: #a0a0a0
+    + li
+      &:before
+        +b_a
+        left: -3px 
+        top: 0 
+        bottom: 0 
+        margin: auto
+        width: 6px
+        height: 10px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5.00499L1 9' stroke='%23B6B6B6' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    a
+
+      color: #19191B
+      font-size: 14px
+      text-decoration: none
+
+
+
+.douscounts
+  margin-right: -10px
+  margin-left: -10px
+  margin-bottom: 100px
+  .col
+    width: 33.33%
+    padding-left: 10px
+    padding-right: 10px
+
+
+.discount_item
+  width: 100%
+  height: 360px
+  background-size: cover
+  background-position: center
+  position: relative
+  +border-radius(10px)
+
+  padding: 35px
+  &:before
+    +b_a
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    +border-radius(10px)
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+  .discount_item_content
+    position: relative
+    margin-top: 32%
+    color: #fff
+    .title
+      color: #fff
+      font-weight: 500
+      margin-bottom: 15px
+      margin-top: 0
+
+
+
+.sort_box
+  +flex
+  +ai-center
+  margin-bottom: 30px
+  strong
+    margin-right: 30px
+
+
+.select2
+  width: auto !important
+
+.select2-container
+  .select2-selection--single
+    .select2-selection__rendered
+      padding-left: 20px
+      padding-right: 35px
+      font-size: 16px
+      font-weight: 400
+.select2-container--default
+  .select2-selection--single
+    border: 1px solid #E8E8E8
+    +border-radius(4px)
+    height: 50px
+    +flex
+    +ai-center
+
+
+    @media (max-width: 1540px)
+      height: 37px
+
+.select2-container--default
+  &.select2-container--open
+    .select2-selection--single
+      .select2-selection__arrow
+        b
+          +transform(rotate(-180deg))
+.select2-container--default
+  .select2-selection--single
+    .select2-selection__arrow
+      height: 100%
+      width: 30px
+
+
+      b
+        border: 0 !important
+        width: 11px
+        height: 6px
+        left: 5px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 1L5.49438 5L1 1' stroke='%23515151' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+.select2-dropdown
+  border: $b_grey
+
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected]
+    background: $green
+
+
+
+.page_content
+  .products_list
+    margin-bottom: 30px
+    .col
+      margin-bottom: 20px
+
+
+.pagination
+  +flex
+  +ai-center
+  +j-center
+  .prev_page
+    +flex
+    width: 50px
+    height: 50px
+    position: relative
+    @media (max-width: 1540px)
+      width: 37px
+      height: 37px
+    &:before
+      +b_a
+      +m_a
+      width: 14px
+      height: 29px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='29' viewBox='0 0 14 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 1L1 14.5169L13 28' stroke='%23515151' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .next_page
+    +flex
+    width: 50px
+    height: 50px
+    position: relative
+    @media (max-width: 1540px)
+      width: 37px
+      height: 37px
+    &:before
+      +b_a
+      +m_a
+      width: 14px
+      height: 29px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='29' viewBox='0 0 14 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L13 14.5169L1 28' stroke='%23515151' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  ul
+    border: 1px solid #E8E8E8
+    border-radius: 5px
+    overflow: hidden
+    +flex
+    +wrap
+    +ai-center
+    margin: 0 25px
+
+    li
+      +flex
+      + li
+        border-left: 1px solid #E8E8E8
+
+      &.active
+        a
+          background: #E8E8E8
+      a
+        width: 50px
+        height: 50px
+        +flex
+        +ai-center
+        +j-center
+        color: #515151
+        text-decoration: none
+        font-size: 20px
+        @media (max-width: 1540px)
+          width: 37px
+          height: 37px
+        &:hover, &:focus
+          text-decoration: none
+          background: #E8E8E8
+

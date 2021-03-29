@@ -1,0 +1,77 @@
+.page_content
+    .container
+        .h1.page_title #{page.title}
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") #{page.title}
+
+        .row.douscounts
+            -for(var d=1;d<=3;d++)
+                .col
+                    .discount_item(style="background-image:url(img/examples/Screenshot_2.png)")
+                        .discount_item_content
+                            .h2.title «Супер Chicken»
+                            if d===1
+                                .desc Рубленое куриное филе BBQ, сыр чеддер, салат, томат, огурец свежий, соус сырный.
+                            else if d===2
+                                .desc Рубленая говядина BBQ, сыр чеддер, криспи из бекона, грибы, лук, томат, соус «Тысяча островов».
+                            else
+
+                                .desc Французский бургер с рубленой говядиной BBQ, устрично-анчоусным соусом, французским сыром с голубой плесенью, беконом, вишневым соусом, салатом айсберг и томатами.
+
+
+        .sort_box
+            strong Сортировать по
+            select.custom_select
+                option Цене
+                option Весу
+                option Рейтингу
+                option Новинки
+
+        .row.products_list
+            -for (var p1 = 1; p1 <= 12; p1++)
+                .col
+                    .product_item
+                        .product_item_img
+                            img(src="img/examples/pizza_1.png")
+                            if p1 === 1
+                                .label.new Новинка
+                            else if p1 === 2
+                                .label.hit Хит продаж
+                            else if p1 === 3
+                                .label.discount Акция
+                        .product_item_body
+                            div
+                                a.product_item_name(href="#") Нокаут
+                                .product_item_excerpt Яйцо, большая говяжья котлета, свежий помидор, маринованные огурчики, сыр чеддер, большая крафтовая булочка
+                            div
+                                .variations
+                                    .item 25 см, 420 г
+                                    .item 30 см, 620 г
+
+                                .price-add_to_basket
+                                    .price
+                                        .item 12,20 руб.
+                                        .item 15,20 руб.
+                                    a.add_to_basket(href="#")
+                                        .text
+                                            span В корзину
+                                            .price
+                                                .item 12,20 руб.
+                                                .item 15,20 руб.
+
+
+        .pagination
+            a.prev_page(href="#")
+            ul
+                -for(var pag=1;pag<=4;pag++)
+                    if pag===1
+                        li.active
+                            a(href="#")=pag
+                    else
+                        li
+                            a(href="#")=pag
+            a.next_page(href="#")
+

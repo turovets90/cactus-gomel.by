@@ -65,7 +65,9 @@ $(document).ready(function(){
         return false;
     });
 
-
+    $('select.custom_select').select2({
+        minimumResultsForSearch: -1
+    });
 
     /*
     $('select.custom_select').select2({
