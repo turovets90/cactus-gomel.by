@@ -69,6 +69,84 @@ $(document).ready(function(){
         minimumResultsForSearch: -1
     });
 
+
+    if($('.prof_slider > div').length > 4 && $(window).innerWidth() > 575){
+        $('.prof_slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            slide: 'div',
+            arrows:true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }else if($(window).innerWidth() < 767 && $('.prof_slider > div').length > 2){
+        $('.prof_slider').slick({
+            autoplay: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
+    }else if($(window).innerWidth() < 1200 && $('.prof_slider > div').length > 3){
+        $('.prof_slider').slick({
+            autoplay: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+    }
+
+
+    $(".gallery_slider").slick({
+        infinite: true,
+        arrows: true,
+        dots: true,
+        //autoplay: true,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1520,
+                settings: {
+                    variableWidth: false,
+                    centerPadding: '68px'
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    variableWidth: false,
+                    centerPadding: '16px'
+                }
+            }
+        ]
+
+    });
+
+
+
+
     /*
     $('select.custom_select').select2({
         minimumResultsForSearch: -1

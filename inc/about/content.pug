@@ -1,0 +1,71 @@
+
+.page_img(style="background-image:url(img/examples/Screenshot_1.png)")
+    .container
+        .h1.page_title #{page.title}
+        ul.breadcrumb
+            li
+                a(href="#") Контакты
+            li
+                a(href="#") #{page.title}
+        .desc Kaktus – это бургерная №1 в Гомеле с ультрамодным интерьером и быстрой доставкой еды. У тебя встреча с друзьями, бизнес-ланч или Birthday Party? Мы зовем тебя к нам! В нашем меню: обалденные бургеры с говядиной и курицей, пиццы на любой вкус.
+
+
+
+.page_content.after_banner
+    .container
+        .mobile_desc Kaktus – это бургерная №1 в Гомеле с ультрамодным интерьером и быстрой доставкой еды. У тебя встреча с друзьями, бизнес-ланч или Birthday Party? Мы зовем тебя к нам! В нашем меню: обалденные бургеры с говядиной и курицей, пиццы на любой вкус.
+
+
+
+    section
+        .container
+            .h2.text_center Наши преимущества
+            -var preim=['','Готовим на огне','Широкий ассортимент','Бонусы и подарки','Гарантия качетсва'];
+            .row.pr_list
+                -for(var pr=1;pr<=4;pr++)
+                    .col
+                        .pr_item
+                            picture
+                                img(src="img/icons/pr_"+pr+".svg")
+                            .text
+                                strong=preim[pr]
+                                span Большая булочка бриошь собственной выпечки, котлета из охлажденной говядины
+    section
+        .container
+            .h2.text_center Команда профессионалов
+            -var prof = ['', 'Антон Вазнецкий', 'Тимур Завидов', 'Марк Силицкий', 'Артем Винокур'];
+            .row.prof_list.prof_slider
+                -for (var pr1 = 1; pr1 <= 6; pr1++)
+                    .col
+                        .prof_item
+                            picture
+                                img(src="img/examples/portra.png")
+                            .text
+                                strong=prof[pr1]
+                                span Большая булочка бриошь собственной выпечки, котлета из охлажденной                              говядины Мы зовем тебя к нам!
+    section.gallery_container
+        .h2.text_center Наше кафе
+        .gallery_list.gallery_slider
+            -for (var g = 1; g <= 4; g++)
+                   .gallery_item
+                       img(src="img/examples/cafe.png")
+
+    .container
+        .subscription_box
+            img(src="img/examples/sgdfgdfg.png")
+            .title Подпишись, и получи скидку на весь ассортимент от нашего ресторана!
+            .subscription_form
+                form
+                    .row
+                        .col_left
+                            input.form_control(type="text" placeholder="Введите ваш E-mail")
+                            small.hide_mobile Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+                        .col_right
+                            button.btn(type="submit") Подписаться
+                            small.hide_desktop Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+
+
+
+
+
+
