@@ -973,7 +973,7 @@ section
 .s_title, h2, .h2
   color: #19191B
   font-size: 34px
-  line-height: 40px
+  line-height: 38px
   margin: 45px 0
   @media (max-width: 575px)
     font-size: 24px
@@ -981,7 +981,16 @@ section
     color: #000
     margin: 20px 0
 
-
+h3, .h3
+  color: #19191B
+  font-size: 28px
+  line-height: 40px
+  margin: 30px 0
+  @media (max-width: 575px)
+    font-size: 24px
+    line-height: 28px
+    color: #000
+    margin: 20px 0
 
 .product_item
   .amount
@@ -1861,3 +1870,141 @@ h1, .h1, .page_title
       color: $green
 
 
+.page_content
+  &.news_page
+    @media (max-width: 991px)
+      padding-top: 0
+    .news_page_content
+      max-width: 1390px
+      margin: 0
+
+
+.newspage_row
+  &.bottom
+    margin-bottom: 70px
+    @media (max-width: 575px)
+      margin-bottom: 30px
+    .sidebar_left
+      @media (max-width: 991px)
+        order: 2
+    .center_content
+      @media (max-width: 991px)
+        order: 1
+        margin-bottom: 30px
+
+
+  .sidebar_left
+    width: 9%
+    @media (max-width: 991px)
+
+      width: 100%
+  .center_content
+    width: 56%
+    @media (max-width: 1540px)
+      font-size: 14px
+      line-height: 23px
+    @media (max-width: 991px)
+      width: 100%
+
+    img
+      +border-radius(10px)
+      margin-bottom: 35px
+      @media (max-width: 575px)
+        margin-bottom: 10px
+    .breadcrumb
+      text-align: left
+      margin-bottom: 5px
+      @media (max-width: 991px)
+        display: none
+    .date
+      +flex
+      +ai-center
+      margin-bottom: 35px
+      @media (max-width: 991px)
+        +j-center
+      @media (max-width: 575px)
+        margin-bottom: 20px
+      img, svg
+        margin-right: 10px
+      span
+        color: #19191B
+        opacity: 0.6
+        @media (max-width: 575px)
+          font-size: 12px
+    .h1, h1
+      margin-bottom: 10px
+      @media (max-width: 991px)
+        text-align: center
+      @media (max-width: 575px)
+        margin-bottom: 0
+
+  .sidebar_right
+    width: 35%
+    @media (max-width: 991px)
+      display: none
+
+
+
+
+
+.sidebar_left_link
+  width: 70px
+  height: 70px
+  +flex
+  +ai-center
+  +j-center
+  background: #fff
+  +box-shadow(0px 4px 20px rgba(0, 0, 0, 0.07))
+  +border-radius(10px)
+  &:hover
+    background: $green
+  &.back
+    @media (max-width: 991px)
+      width: 40px
+      height: 40px
+      img, svg
+        max-width: 22px
+
+
+.social
+  @media (max-width: 575px)
+    +flex
+    +ai-center
+    +j-beetween
+  li
+    margin-bottom: 20px
+
+
+.sidebar_right
+  .h3, h3
+    margin-top: 0
+
+.last_news
+  .last_news_item
+    margin-bottom: 30px
+    +box-shadow(0px 10px 40px rgba(0, 0, 0, 0.05))
+    +border-radius(10px)
+    background: #fff
+    padding: 25px
+
+    .news_title
+      display: inline-block
+      text-decoration: none
+      font-size: 22px
+      line-height: 30px
+      color: #19191B
+      margin-bottom: 20px
+    .news_excerpt
+      font-size: 14px
+      line-height: 23px
+      color: $black
+      margin-bottom: 15px
+    .last_news_item_footer
+      border-top: $b_grey
+      +flex
+      +ai-center
+      +j-beetween
+      padding-top: 15px
+    .date
+      color: #B5B5B5
+      font-size: 14px
