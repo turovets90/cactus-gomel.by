@@ -1,0 +1,75 @@
+.page_content
+    .container
+        .h1.page_title #{page.title}
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") О нас
+            li
+                a(href="#") #{page.title}
+        .row.news_list
+            -for(var n=1;n<=6;n++)
+                .col
+                    .news_item
+                        a.news_img(href="#" style="background-image:url(img/examples/cafe.png)")
+                        .date 14-08-2020
+                        a.news_name(href="#") Crazy Вторник! 2 пиццы по цене 1 в КАКТУС!
+                        .excerpt Покупай одну пиццу, вторую получай в подарок. Только в вторник, 2 пиццы и 2 колы по цене одной!
+
+            .subscription_box.hide_mobile
+                img(src="img/examples/sgdfgdfg.png")
+                .title Подпишись, и получи скидку на весь ассортимент от нашего ресторана!
+                .subscription_form
+                    form
+                        .row
+                            .col_left
+                                input.form_control(type="text" placeholder="Введите ваш E-mail")
+                                small.hide_mobile Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+                            .col_right
+                                button.btn(type="submit") Подписаться
+                                small.hide_desktop Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+
+            -for (var n = 1; n <= 6; n++)
+                .col
+                    .news_item
+                        a.news_img(href="#" style="background-image:url(img/examples/cafe.png)")
+                        .date 14-08-2020
+                        a.news_name(href="#") Crazy Вторник! 2 пиццы по цене 1 в КАКТУС!
+                        .excerpt Покупай одну пиццу, вторую получай в подарок. Только в вторник, 2 пиццы и 2 колы по цене одной!
+
+
+        .pagination.hide_mobile
+            a.prev_page(href="#")
+            ul.page_list
+                -for (var pag = 1; pag <= 4; pag++)
+                    if pag === 1
+                        li.active
+                            a(href="#")=pag
+                    else
+                        li
+                            a(href="#")=pag
+            a.next_page(href="#")
+
+        .text_center.hide_desktop.mb_45
+            button.load_more
+                span Загрузить ещё
+
+
+        .subscription_box.hide_desktop
+            img(src="img/examples/sgdfgdfg.png")
+            .title Подпишись, и получи скидку на весь ассортимент от нашего ресторана!
+            .subscription_form
+                form
+                    .row
+                        .col_left
+                            input.form_control(type="text" placeholder="Введите ваш E-mail")
+                            small.hide_mobile Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+                        .col_right
+                            button.btn(type="submit") Подписаться
+                            small.hide_desktop Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+
+
+
+
+
