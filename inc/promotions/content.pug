@@ -1,0 +1,38 @@
+.page_content
+    .container
+        .h1.page_title #{page.title}
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") #{page.title}
+
+
+
+
+        .promotions_list
+            -for(var pr=1;pr<=4;pr++)
+                .promotion_item
+                    .img(style="background-image:url(img/examples/Screenshot_3.png)")
+                    .text
+                        div
+                            .title Даем супер условия корпоративным клиентам, на мероприятия и праздники, просто оставьте свою заявку!
+                            .excerpt Предоставляем индивидуальные условия для заказов:•крупным компаниям•офисам (обеденное меню и другие специальные предложе...
+                        a.read_more(href="#") Условия акции
+
+
+
+        .subscription_box
+            img(src="img/examples/sgdfgdfg.png")
+            .title Подпишись, и получи скидку на весь ассортимент от нашего ресторана!
+            .subscription_form
+                form
+                    .row
+                        .col_left
+                            input.form_control(type="text" placeholder="Введите ваш E-mail")
+                            small.hide_mobile Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+                        .col_right
+                            button.btn(type="submit") Подписаться
+                            small.hide_desktop Нажимая кнопку «Подписаться» вы соглашаетесь с правилами <a href="#">обработки персональных данных</a>
+
+
