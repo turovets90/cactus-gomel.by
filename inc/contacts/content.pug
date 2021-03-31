@@ -1,0 +1,51 @@
+.page_content
+    .container.contacts_container
+        .h1.page_title #{page.title}
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") #{page.title}
+
+
+        .row.contacts_row
+            .col
+                .c_item
+                    picture
+                        img(src="img/icons/mdi_location_on.svg")
+                    .text
+                        span Адрес
+                        strong г. Гомель, ул. Немига 17
+            .col
+                .c_item
+                    picture
+                        img(src="img/icons/phone1.svg")
+                    .text
+                        span Звонок для MTC, A1, Life
+                        strong 6969
+            .col
+                .c_item
+                    picture
+                        img(src="img/icons/mail.svg")
+                    .text
+                        span Вопросы и предложения
+                        strong kaktusgomel@mail.ru
+            .col
+                ul.social_contacts
+                    li
+                        a(href="#")
+                            img(src="img/icons/vk1.svg")
+                    li
+                        a(href="#")
+                            img(src="img/icons/facebook1.svg")
+                    li
+                        a(href="#")
+                            img(src="img/icons/instagram1.svg")
+
+            .col.map
+                img(src="img/examples/map.png")
+
+
+
+
+

@@ -975,11 +975,15 @@ section
   font-size: 34px
   line-height: 38px
   margin: 45px 0
+  font-weight: 500
   @media (max-width: 575px)
     font-size: 24px
     line-height: 28px
     color: #000
     margin: 20px 0
+  @media (max-width: 375px)
+    font-size: 20px
+    line-height: 24px
 
 h3, .h3
   color: #19191B
@@ -2008,3 +2012,216 @@ h1, .h1, .page_title
     .date
       color: #B5B5B5
       font-size: 14px
+
+
+
+.contacts_row
+  +j-beetween
+  .col
+    margin-bottom: 40px
+    @media (max-width: 575px)
+      width: 100%
+      margin-bottom: 27px
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 2
+      &:nth-child(3)
+        order: 2
+      &:nth-child(4)
+        +flex
+        +j-center
+        order: 5
+      &:nth-child(5)
+        order: 4
+
+    .c_item
+      +flex
+      +ai-center
+      picture
+        width: 48px
+        min-width: 48px
+        height: 48px
+        background: $green
+        +border-radius(50%)
+        +flex
+        +ai-center
+        +j-center
+        margin-right: 10px
+      .text
+        line-height: 1.2
+        span
+          display: block
+          font-size: 14px
+          margin-bottom: 3px
+          @media (max-width: 1540px)
+            font-size: 12px
+
+        strong
+          display: block
+          color: #19191B
+          font-size: 20px
+          font-weight: 700
+          @media (max-width: 1540px)
+            font-size: 18px
+
+
+
+  .social_contacts
+    +flex
+    +ai-center
+
+    li
+      + li
+        margin-left: 20px
+      a
+        width: 48px
+        height: 48px
+        background: $green
+        +border-radius(50%)
+        +flex
+        +ai-center
+        +j-center
+        &:hover, &:focus
+          background: $red
+
+
+
+.contacts_container
+  max-width: 1264px
+  @media (min-width: 1541px)
+
+.delivery_row
+  margin-bottom: 120px
+  @media (max-width: 1540px)
+    margin-bottom: 60px
+  @media (max-width: 575px)
+    margin-bottom: 25px
+  .col
+    width: 50%
+    @media (max-width: 767px)
+      width: 100%
+    &:first-child
+      @media (min-width: 1541px)
+        border-right: $b_grey
+    .text
+      max-width: 633px
+      font-size: 20px
+      line-height: 36px
+      @media (max-width: 1540px)
+        font-size: 14px
+        line-height: 25px
+        max-width: 541px
+      @media (max-width: 767px)
+        max-width: 100%
+    &:last-child
+      +flex
+      +j-end
+  a
+    text-decoration: none
+
+
+
+.delivery_search_header
+  max-width: 563px
+  margin: auto
+  .delivery_search
+    +flex
+    +ai-center
+    +j-center
+    margin-bottom: 40px
+    @media (max-width: 575px)
+      +wrap
+      margin-bottom: 30px
+    .delivery_btn
+      width: 192px
+      height: 44px
+      background: none
+      border: 1px solid $green
+      +border-radius(5px)
+      +flex
+      +ai-center
+      +j-center
+      color: $green
+      font-size: 14px
+      @media (max-width: 1540px)
+        height: 58px
+        font-size: 16px
+      @media (max-width: 575px)
+        width: 100%
+      &:hover
+        background: $green
+        color: #fff
+        span
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M9 0C5.51067 0 2.67188 2.63002 2.67188 5.86272C2.67188 6.95494 2.99844 8.02085 3.61649 8.9456L8.63979 16.4452C8.73601 16.5889 8.90553 16.6762 9.08786 16.6762C9.08926 16.6762 9.09063 16.6762 9.09204 16.6762C9.27594 16.6748 9.44582 16.5849 9.54028 16.4387L14.4355 8.86639C15.0195 7.96118 15.3281 6.92254 15.3281 5.86272C15.3281 2.63002 12.4893 0 9 0ZM13.5304 8.36473L9.07987 15.2491L4.5129 8.43079C3.99846 7.66108 3.71953 6.77307 3.71953 5.86272C3.71953 3.1688 6.09223 0.970606 9 0.970606C11.9078 0.970606 14.277 3.1688 14.277 5.86272C14.277 6.74607 14.0164 7.61137 13.5304 8.36473Z' fill='%23fff'/%3e%3cpath d='M9 2.9314C7.25534 2.9314 5.83594 4.2464 5.83594 5.86276C5.83594 7.46878 7.23224 8.79412 9 8.79412C10.7896 8.79412 12.1641 7.45113 12.1641 5.86276C12.1641 4.2464 10.7447 2.9314 9 2.9314ZM9 7.82351C7.83081 7.82351 6.88359 6.94303 6.88359 5.86276C6.88359 4.78519 7.83689 3.902 9 3.902C10.1631 3.902 11.1129 4.78519 11.1129 5.86276C11.1129 6.92726 10.1877 7.82351 9 7.82351Z' fill='%23fff'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='18' height='16.6762' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
+
+      span
+        display: inline-block
+        position: relative
+        padding-left: 23px
+        &:before
+          +b_a
+          left: 0
+          top: 0
+          bottom: 0
+          margin: auto
+          width: 18px
+          height: 17px
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M9 0C5.51067 0 2.67188 2.63002 2.67188 5.86272C2.67188 6.95494 2.99844 8.02085 3.61649 8.9456L8.63979 16.4452C8.73601 16.5889 8.90553 16.6762 9.08786 16.6762C9.08926 16.6762 9.09063 16.6762 9.09204 16.6762C9.27594 16.6748 9.44582 16.5849 9.54028 16.4387L14.4355 8.86639C15.0195 7.96118 15.3281 6.92254 15.3281 5.86272C15.3281 2.63002 12.4893 0 9 0ZM13.5304 8.36473L9.07987 15.2491L4.5129 8.43079C3.99846 7.66108 3.71953 6.77307 3.71953 5.86272C3.71953 3.1688 6.09223 0.970606 9 0.970606C11.9078 0.970606 14.277 3.1688 14.277 5.86272C14.277 6.74607 14.0164 7.61137 13.5304 8.36473Z' fill='%23079D28'/%3e%3cpath d='M9 2.9314C7.25534 2.9314 5.83594 4.2464 5.83594 5.86276C5.83594 7.46878 7.23224 8.79412 9 8.79412C10.7896 8.79412 12.1641 7.45113 12.1641 5.86276C12.1641 4.2464 10.7447 2.9314 9 2.9314ZM9 7.82351C7.83081 7.82351 6.88359 6.94303 6.88359 5.86276C6.88359 4.78519 7.83689 3.902 9 3.902C10.1631 3.902 11.1129 4.78519 11.1129 5.86276C11.1129 6.92726 10.1877 7.82351 9 7.82351Z' fill='%23079D28'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='18' height='16.6762' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
+
+
+    .field
+      margin-right: 15px
+      position: relative
+      @media (max-width: 575px)
+        width: 100%
+        margin-bottom: 20px
+        margin-right: 0
+
+      &:before
+        +b_a
+        left: 12px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 24px
+        height: 24px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z' fill='%238F8F8F'/%3e%3c/svg%3e ")
+
+
+      input
+        width: 309px
+        height: 44px
+        border: 1px solid #8F8F8F
+        +border-radius(5px)
+        padding-left: 40px
+        font-size: 14px
+        font-family: $font
+        color: $black
+        @media (max-width: 1540px)
+          height: 58px
+        @media (max-width: 575px)
+          width: 100%
+        &::-webkit-input-placeholder
+          color: #8F8F8F
+          font-size: 14px
+          font-family: $font
+        &::-moz-placeholder
+          color: #8F8F8F
+          font-size: 14px
+          font-family: $font
+        &::-ms-input-placeholder
+          color: #8F8F8F
+          font-size: 14px
+          font-family: $font
+        &:-moz-placeholder
+          color: #8F8F8F
+          font-size: 14px
+          font-family: $font
+        &:-ms-input-placeholder
+          color: #8F8F8F
+          font-size: 14px
+          font-family: $font
+
+
